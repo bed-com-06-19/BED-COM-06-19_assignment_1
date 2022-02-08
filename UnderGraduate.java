@@ -16,9 +16,9 @@ class UnderGraduate extends StudentAccount{
     private static int generator=100;
   
   //constructors
-UnderGraduate( String firstName, String lastName, 
-  int yearOfStudy, String programOfStudy){
-    super(firstName, lastName,  yearOfStudy,  programOfStudy);
+UnderGraduate( String firstName, String lastName, String programOfStudy, 
+  int yearOfStudy){
+    super(firstName, lastName,   programOfStudy, yearOfStudy);
     accountNumber = "UG" + generator;
     generator++;
 }
@@ -83,6 +83,7 @@ public void repay(){
         tuition = input.nextDouble();
         tuitionInterestRate =(double)( tuition* 0.10);
         System.out.println(" Tuition Loan applied successfully!!");
+        return;
     }
     // stationary loan method
     public void stationary(){
