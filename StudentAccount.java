@@ -3,8 +3,9 @@ import java.util.Scanner;
 public class StudentAccount{
     private String firstName;
     private String lastName;
-    private int yearOfStudy;
     private String programOfStudy;
+    private int yearOfStudy;
+
 
  //constructors
   StudentAccount(){
@@ -12,11 +13,11 @@ public class StudentAccount{
   }   
 
   StudentAccount( String firstName, String lastName, 
-  int yearOfStudy, String programOfStudy){
+   String programOfStudy ,int yearOfStudy){
           this.firstName=firstName;
           this.lastName=lastName;
-          this.yearOfStudy=yearOfStudy;
           this.programOfStudy=programOfStudy;
+          this.yearOfStudy=yearOfStudy;
 
   }
 
@@ -29,12 +30,37 @@ public class StudentAccount{
       this.lastName=lastName;
 
   }
+
+  public void setProgramOfStudy( String programOfStudy){
+      this.programOfStudy=programOfStudy;
+
+  }
   public void setYearOfStudy( int yearOfStudy){
       this.yearOfStudy=yearOfStudy;
 
   }
-  public void setProgramOfStudy( String programOfStudy){
-      this.programOfStudy=programOfStudy;
+  
+   //getters
+
+  public String getFirstName(){
+      return firstName;
+
+  } 
+  public String getLastName(){
+      return lastName;
+
+  } 
+  public String getProgramOfStudy(){
+  return programOfStudy;
+      }
+
+
+  public int getYearOfStudy(){
+      return yearOfStudy;
+
   }
+ 
+
+  //methods
   
 }
